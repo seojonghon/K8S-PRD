@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  type: NodePort  # 🟢 NodePort 타입으로 설정
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80         # Service 포트
+      targetPort: 80   # 컨테이너 포트
+      nodePort: 30080  # 노드에서 접근할 포트 (30000~32767 사이)
+

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 2  # 🔹 백엔드 서버 2개 실행
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: seojonghon/flask-backend:latest  # 🔹 Flask 백엔드 컨테이너 이미지
+        ports:
+        - containerPort: 5000  # Flask 기본 포트
+
