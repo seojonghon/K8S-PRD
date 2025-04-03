@@ -1,0 +1,14 @@
+.kube/config
+/var/lib/etcd
+*.crt
+*.key
+*.pem
+/var/log/kubelet.log
+/etc/kubernetes/
+.kube/config
+/var/lib/etcd
+*.crt
+*.key
+*.pem
+/var/log/kubelet.log
+/etc/kubernetes/
